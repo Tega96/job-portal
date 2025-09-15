@@ -1,9 +1,10 @@
 import { memo } from 'react';
+import Header from './components/Header';
 
 const LandingPage = () => {
   return (
     <div className="LandingPage">
-      <h2>LandingPage</h2>
+      <h2><Header /></h2>
     </div>
   );
 };

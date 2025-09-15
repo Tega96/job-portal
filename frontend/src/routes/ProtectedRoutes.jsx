@@ -1,10 +1,10 @@
 import { memo } from 'react';
+import React from 'react';
+import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
-const ProtectedRoutes = () => {
+const ProtectedRoutes = ({requiredRole}) => {
   return (
-    <div className="ProtectedRoutes">
-      <h2>ProtectedRoutes</h2>
-    </div>
+    <Outlet />
   );
 };
 
