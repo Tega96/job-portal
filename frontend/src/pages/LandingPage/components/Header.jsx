@@ -1,7 +1,8 @@
 import { Briefcase } from 'lucide-react';
 import { memo } from 'react';
 import { useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+
 
 const Header = () => {
 
@@ -10,7 +11,12 @@ const Header = () => {
     const navigate = useNavigate()
 
   return (
-    <header>
+    <motion.header
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 30 }}
+        transition={{ duration: 0.6 }}
+        className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-gray-100"
+    >
         <div className="container mx-auto px-4 mt-2">
             <div className="flex items-center justify-between h-16">
                 <div className="flex items-center space-x-3">
@@ -78,7 +84,7 @@ const Header = () => {
                 </div>
             </div>
         </div>
-    </header>
+    </motion.header>
   );
 };
 
