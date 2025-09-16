@@ -64,5 +64,34 @@ export const NAVIGATION_MENU = [
     { id: "employer-dashboard", name: "Dashboard", icon: LayoutDashboard },
     { id: "post-jobs", name: "Post Job", icon: Plus},
     { id: "manage-jobs", name: "Manage Jobs", icon: Briefcase },
-    { id: "company-profile, "}
+    { id: "company-profile", name: "Company Profile", icon: Building2}
+];
+
+// Categories and job types
+export const CATEGORIES = [
+    { value: "Engineering", label: "Engineering"},
+    { value: "Design", label: "Design" },
+    { value: "Marketing", label: "Marketing" },
+    { value: "Sales ", label: "Sales" },
+    { value: "IT & Software", label: "IT & Software" },
+    { value: "Customer-Service", label: "Customer Service"},
+    { value: "Product", label: "Product" },
+    { value: "Operations", label: "Operations" },
+    { value: "Finance", label: "Finance" },
+    { value: "HR", label: "Human Resources" },
+    { value: "Other", label: "Other"}
+];
+
+export const JOB_TYPES = [
+    { value: "Remote", label: "Remote" },
+    { value: "Full-Time", label: "Full-Time" },
+    { value: "Part-Time", label: "Part-Time" },
+    { value: "Contract", lable: "Contract" },
+    { value: "Internship", label: "Internship" },
+];
+
+export const SALARY_RANGES = [
+    "Less than $1000",
+    "$1000 - $", "$15,000",
+    "More than $15,000"
 ]
