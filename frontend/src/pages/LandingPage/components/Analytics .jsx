@@ -66,8 +66,8 @@ const Analytics = () => {
                         className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
                     >
                         <div className="flex items-center justify-between mb-4">
-                            <div className={"w-12 h-12 bg-${stat.color}-100 rounded-xl flex items-center justify-center"}>
-                                <stat.icon className={"w-6 h-6 text-${stat.color}-600 "} />
+                            <div className={`w-12 h-12 bg-${stat.color}-100 rounded-xl flex items-center justify-center`}>
+                                <stat.icon className={`w-6 h-6 text-${stat.color}-600 `} />
                             </div>
                             <span className="text-green-600 text-sm font-semibold bg-green-t0 px-2 py-1 rounded-full">
                                 {stat.growth}
