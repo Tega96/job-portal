@@ -13,6 +13,7 @@ import {
   AlertCircle,
   Loader,
 } from 'lucide-react'
+import { validateAvatar, validateEmail, validatePassword } from '../../utils/helper';
 
 const SignUp = () => {
 
