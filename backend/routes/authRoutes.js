@@ -4,7 +4,7 @@ import { protect } from '../middlewares/authMiddleware.js'
 import upload from '../middlewares/uploadMiddleware.js';
 
 
-const router = Router();
+export const router = Router();
 
 router.post('/register', register);
 router.post('/login', login);
@@ -17,5 +17,3 @@ router.post("/upload-image", upload.single("image"), (req, res) => {
     const imageUrl = `${req.protocol}://${req.get(host)}/uploads/${req.file.filename}`;
     res.status(200).json({ imageUrl })
 })
-
-export default router;

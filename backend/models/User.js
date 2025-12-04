@@ -11,7 +11,7 @@ const userSchema = new Schema({
     // for employer
     companyName: String,
     companyDescripton: String,
-    companyLogo, String,
+    companyLogo: String,
 }, {timestamps: true});
 
 // Encrypt password before save

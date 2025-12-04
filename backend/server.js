@@ -1,11 +1,15 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
-import path from 'path'
+import { fileURLToPath } from 'url'
+import {dirname, join} from 'path'
 import connectDB from './config/db.js'
-// import authRoutes from "./routes/authRoutes"
+import {router as authRoutes} from "./routes/authRoutes.js"
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename)
 
 const app = express() 
 const PORT = process.env.PORT || 3300
@@ -27,10 +31,10 @@ app.use(express.json)
 // app.use(express.urlencoded({extended: true}))
 
 // Routes
-// app.use("/api/auth", authRoutes)
+app.use("/api/auth", authRoutes)
 
 // Serve uploads folder
-// app.use("/uploads", express.static(path.join(__dirname, "uploads"), {}));
+app.use("/uploads", express.static(join(__dirname, "uploads")));
 
 app.get('/', (req, res) => {
     res.send('Hello world')

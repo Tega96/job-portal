@@ -1,4 +1,4 @@
-import User from '../models/User'
+import User from '../models/User.js'
 import jwt from 'jsonwebtoken'
 
 // Generate token
@@ -7,7 +7,7 @@ const generateToken = (id) => {
 }
 
 //@desc Register new user
-exports.register = async (req, res) => {
+export const register = async (req, res) => {
     try {
         const { name, email, password, avatar, role } = req.body;
         const userExists = await User.findOne({email});
@@ -33,7 +33,7 @@ exports.register = async (req, res) => {
 };
 
 //@desc Login user
-exports.login = async (req, res) => {
+export const login = async (req, res) => {
     try {
         const { email, password } = req.body;
         const user = await User.findOne({ email });
@@ -59,6 +59,6 @@ exports.login = async (req, res) => {
 }
 
 //@desc Get logged-in user
-exports.getMe = async (req, res) => {
+export const getMe = async (req, res) => {
     res.json(req.user);
 }
