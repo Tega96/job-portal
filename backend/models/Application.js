@@ -1,4 +1,4 @@
-import { Schema } from 'mongoose'
+import { Schema, model } from 'mongoose'
 
 const applicationSchema = new Schema({
     job: {type: Schema.Types.ObjectId, ref: "Job", required: true},

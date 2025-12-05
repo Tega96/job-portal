@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose'
 
-const jobSchema = new mongoose.Schema(
+const jobSchema = new Schema(
     {
         title: {type: String, required: true},
         description: { type: String, required: true },
