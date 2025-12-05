@@ -8,6 +8,7 @@ import {router as authRoutes} from "./routes/authRoutes.js"
 import {router as userRoutes} from "./routes/userRoutes.js"
 import {router as jobRoutes} from "./routes/jobRoutes.js"
 import {router as applicationRoutes} from './routes/applicationRoutes.js'
+import {router as savedJobsRouter} from './routes/savedJobsRoutes.js'
 
 
 dotenv.config();
@@ -39,6 +40,7 @@ app.use("/api/auth", authRoutes)
 app.use("/api/user", userRoutes)
 app.use("/api/jobs", jobRoutes)
 app.use("/api/application", applicationRoutes)
+app.use("/save-jobs", savedJobsRouter)
 
 // Serve uploads folder
 app.use("/uploads", express.static(join(__dirname, "uploads")));
