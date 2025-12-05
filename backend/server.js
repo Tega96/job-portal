@@ -7,6 +7,8 @@ import connectDB from './config/db.js'
 import {router as authRoutes} from "./routes/authRoutes.js"
 import {router as userRoutes} from "./routes/userRoutes.js"
 import {router as jobRoutes} from "./routes/jobRoutes.js"
+import {router as applicationRoutes} from './routes/applicationRoutes.js'
+
 
 dotenv.config();
 
@@ -36,6 +38,7 @@ app.use(express.json)
 app.use("/api/auth", authRoutes)
 app.use("/api/user", userRoutes)
 app.use("/api/jobs", jobRoutes)
+app.use("/api/application", applicationRoutes)
 
 // Serve uploads folder
 app.use("/uploads", express.static(join(__dirname, "uploads")));
