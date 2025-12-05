@@ -1,4 +1,4 @@
-import SavedJobs from "../models/SavedJob";
+import SavedJobs from "../models/SavedJob.js";
 
 //@desc Save a Job
 export const saveJob = async (req, res) => {

@@ -5,7 +5,7 @@ import {
     getApplicantsForJob,
     getApplicationById,
     updateStatus,
-} from '../controlers/applicationControllers.js'
+} from '../controllers/applicationControllers.js'
 import { protect } from "../middlewares/authMiddleware.js"
 
 
