@@ -2,12 +2,13 @@ import { Briefcase } from 'lucide-react';
 import { memo } from 'react';
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion';
+import { useAuth } from '../../../context/AuthContext';
 
 
 const Header = () => {
-
-    const isAuthenticated = true;
-    const user = {fullName: "Otega Otite", role: "employer"};
+    const {user, isAuthenticated} = useAuth()
+    //discard const isAuthenticated = true;
+    //discard const user = {fullName: "Otega Otite", role: "employer"};
     const navigate = useNavigate()
 
   return (

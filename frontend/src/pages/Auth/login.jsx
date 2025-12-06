@@ -11,10 +11,13 @@ import {
   CheckCircle
 } from 'lucide-react';
 import { validateEmail } from '../../utils/helper';
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from '../../context/AuthContext';
+import { API_PATHS } from '../../utils/apiPath';
+import axiosInstance from '../../utils/axiosInstance';
 
 const Login = () => {
-  const {login} = useAuth
+  const {login} = useAuth()
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
