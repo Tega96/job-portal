@@ -18,11 +18,11 @@ import JobDetails from './pages/JobSeaker/JobDetails';
 import SavedJobs from './pages/JobSeaker/SavedJobs';
 import ManageJobs from './pages/Employer/ManageJobs';
 import ProtectedRoutes from './routes/ProtectedRoutes';
-
+import { AuthProvider } from './context/AuthContext';
 
 const App = () => {
   return (
-    <div >
+    <AuthProvider>
       <Router>
         <Routes>
           {/**Public Routes */}
@@ -58,7 +58,7 @@ const App = () => {
           },
         }}
       />
-    </div>
+    </AuthProvider>
   )
 }
 export default App;
