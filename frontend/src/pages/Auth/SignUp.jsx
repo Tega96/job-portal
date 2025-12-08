@@ -103,7 +103,7 @@ const SignUp = () => {
     };
 
     // Remove empty errors
-    Objext.keys(errors).forEach((key) => {
+    Object.keys(errors).forEach((key) => {
       if (!errors[key]) delete errors[key];
     });
 
